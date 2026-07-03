@@ -132,36 +132,6 @@
     updateBa(baRange.value);
   }
 
-  /* ---------- Testimonials carousel dots ---------- */
-  var testiTrack = $('#testiTrack');
-  var testiDots = $('#testiDots');
-  if (testiTrack && testiDots) {
-    var cards = $$('.testi-card', testiTrack);
-    cards.forEach(function (_, i) {
-      var dot = document.createElement('button');
-      dot.setAttribute('aria-label', 'Ir al testimonio ' + (i + 1));
-      if (i === 0) dot.classList.add('is-active');
-      dot.addEventListener('click', function () {
-        cards[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
-      });
-      testiDots.appendChild(dot);
-    });
-    var dotEls = $$('button', testiDots);
-    var updateDots = function () {
-      var scrollLeft = testiTrack.scrollLeft;
-      var closest = 0;
-      var minDist = Infinity;
-      cards.forEach(function (card, i) {
-        var dist = Math.abs(card.offsetLeft - scrollLeft);
-        if (dist < minDist) { minDist = dist; closest = i; }
-      });
-      dotEls.forEach(function (d, i) { d.classList.toggle('is-active', i === closest); });
-    };
-    testiTrack.addEventListener('scroll', function () {
-      window.requestAnimationFrame(updateDots);
-    }, { passive: true });
-  }
-
   /* ---------- FAQ accordion ---------- */
   $$('.faq-item__q').forEach(function (btn) {
     btn.addEventListener('click', function () {

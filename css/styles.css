@@ -281,20 +281,6 @@ html[data-theme="light"] .icon-moon { display: block; }
 .stats-item__label { color: var(--text-muted); font-size: 0.9rem; }
 @media (max-width: 700px) { .stats-band__grid { grid-template-columns: repeat(2, 1fr); gap: 32px; } }
 
-/* ===================== TESTIMONIALS ===================== */
-.testimonials__track { display: flex; gap: 22px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; scrollbar-width: none; }
-.testimonials__track::-webkit-scrollbar { display: none; }
-.testi-card { flex: 0 0 min(380px, 86vw); scroll-snap-align: start; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; gap: 16px; }
-.testi-card__stars { color: #fbbf24; letter-spacing: 2px; }
-.testi-card p { color: var(--text-muted); font-size: 0.95rem; flex: 1; }
-.testi-card__author { display: flex; align-items: center; gap: 12px; }
-.testi-card__avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--gradient); color: #fff; font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.testi-card__author strong { display: block; font-size: 0.92rem; }
-.testi-card__author span { font-size: 0.8rem; color: var(--text-muted); }
-.testimonials__dots { display: flex; justify-content: center; gap: 8px; margin-top: 24px; }
-.testimonials__dots button { width: 8px; height: 8px; border-radius: 50%; background: var(--border); transition: background .2s ease, transform .2s ease; }
-.testimonials__dots button.is-active { background: var(--gradient); transform: scale(1.3); }
-
 /* ===================== PRICING ===================== */
 .pricing__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
 .price-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 30px; display: flex; flex-direction: column; position: relative; transition: transform .3s ease; }
@@ -320,6 +306,7 @@ html[data-theme="light"] .icon-moon { display: block; }
 
 /* ===================== BLOG ===================== */
 .blog__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.blog__grid--single { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
 .blog-card { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); background: var(--surface); transition: transform .3s ease, box-shadow .3s ease; }
 .blog-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
 .blog-card__img { height: 180px; background-size: cover; background-position: center; }
