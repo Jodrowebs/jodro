@@ -1,0 +1,10 @@
+{
+  "name": "Jodro — Agencia Digital",
+  "short_name": "Jodro",
+  "description": "Diseño web, SEO e IA para empresas que quieren crecer online.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "lang": "es"
+}
